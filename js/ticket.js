@@ -82,11 +82,11 @@ function ticketGenerator() {
 function resetValues() {
   // name of traveler
 
-  document.getElementById("userName").innerHTML = "Jon Snow";
+  document.getElementById("userName").value = "Jon Snow";
 
   // kilometers to travel
 
-  document.getElementById("userKm").innerHTML = 10;
+  document.getElementById("userKm").value = 10;
 
   // Formula for printed cost result
 
@@ -98,5 +98,5 @@ function resetValues() {
 
   // Formula for printed user name
 
-  document.getElementById("showUserName").innerHTML = "Jon Snow";
+  document.getElementById("showUserName").innerHTML = "--";
 }
