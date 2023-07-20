@@ -2,11 +2,11 @@
 
 // Kilometers to travel
 
-const numKm = parseInt(prompt("Quanti Kilometri dovrai percorrere?"));
+// const numKm = parseInt(prompt("Quanti Kilometri dovrai percorrere?"));
 
 // Age of passenger
 
-const age = parseInt(prompt("Quanti anni hai?"));
+// const age = parseInt(prompt("Quanti anni hai?"));
 
 // Cost per kilometer
 
