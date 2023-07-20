@@ -26,27 +26,29 @@
           calcola il prezzo del tuo biglietto
         </h1>
         <!-- user input card -->
-        <div class="card">
-          <div class="row justify-content-center">
+        <div class="card p-4">
+          <div class="row justify-content-center g-3">
             <!-- Name and Surname -->
-            <div class="col-4">
+            <div class="col-4 text-center">
+              <h3>Nome e Cognome</h3>
               <div class="input-group">
                 <input
                   type="text"
                   id="userName"
-                  class="form-control"
+                  class="form-control text-center"
                   placeholder="Jon Snow"
                   value="Jon Snow"
                 />
               </div>
             </div>
             <!-- kilometers -->
-            <div class="col-4">
+            <div class="col-4 text-center">
+              <h3>Km da percorrere</h3>
               <div class="input-group">
                 <input
                   type="text"
                   id="userKm"
-                  class="form-control"
+                  class="form-control text-center"
                   placeholder="10"
                   value="10"
                 />
@@ -54,17 +56,18 @@
               </div>
             </div>
             <!-- age group -->
-            <div class="col-4">
-              <select class="form-select" name="" id="userAge">
+            <div class="col-4 text-center">
+              <h3>Fascia d'età</h3>
+              <select class="form-select text-center" name="" id="userAge">
                 <option value="17">Minorenne</option>
                 <option value="18">Maggiorenne</option>
                 <option value="66">Sopra i 65</option>
               </select>
             </div>
             <!-- generate ticket  -->
-            <div class="col-2 btn btn-primary" id="generate">Genera</div>
+            <div class="col-2 mx-2 btn btn-primary" id="generate">Genera</div>
             <!-- reset values -->
-            <div class="col-2 btn btn-primary" id="reset">Annulla</div>
+            <div class="col-2 mx-2 btn btn-primary" id="reset">Annulla</div>
           </div>
         </div>
       </div>
@@ -74,14 +77,14 @@
       <div class="container">
         <h1 class="text-uppercase text-center py-4">il tuo biglietto</h1>
         <!-- mockup ticket -->
-        <div class="card">
+        <div class="card p-4">
           <h2 class="text-uppercase">dettaglio passeggeri</h2>
           <div class="d-flex">
-            <div>
-              <h2 class="text-uppercase">nome passeggero</h2>
-              <p id="showUserName">Jon Snow</p>
+            <div class="passenger col-4 p-2">
+              <h4 class="text-uppercase">nome passeggero</h4>
+              <p id="showUserName" class="fs-4">Jon Snow</p>
             </div>
-            <div>
+            <div class="information flex-grow-1">
               <table class="table">
                 <thead>
                   <tr>

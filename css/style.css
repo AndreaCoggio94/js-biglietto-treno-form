@@ -11,3 +11,28 @@
 h1 {
   color: var(--white);
 }
+
+/* user ticket */
+
+#user-ticket .d-flex {
+  width: 100%;
+}
+
+#user-ticket .passenger {
+  color: black;
+  background-color: gray;
+  border: 1px solid black;
+}
+
+#user-ticket .information {
+  border: 1px solid black;
+  border-right: 0;
+}
+
+#user-ticket th {
+  border-bottom-width: 0;
+}
+
+#user-ticket td {
+  border-bottom-width: 0;
+}
