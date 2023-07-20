@@ -1,25 +1,19 @@
 // event listener
 
-document.getElementById("generate").addEventListener("click", myFunction);
+document.getElementById("generate").addEventListener("click", ticketGenerator);
 
-function myFunction() {
-  // kilometer
+// function to generate ticket value
 
-  const userKm = document.getElementById("userKm").value;
+function ticketGenerator() {
+  // kilometers to travel
+
+  const userKm = parseInt(document.getElementById("userKm").value);
   console.log("i tuoi kilometri " + userKm);
-
-  // Kilometers to travel
-
-  const numKm = parseInt(userKm);
 
   // Age inserted by passenger
 
   const userAge = document.getElementById("userAge").value;
   console.log("la tua fascia di età " + userAge);
-
-  // Age of passenger
-
-  const age = parseInt(userAge);
 
   // Cost per kilometer
 
@@ -33,17 +27,17 @@ function myFunction() {
 
   // Calculated Price
 
-  let totalCost = numKm * costKm;
+  let totalCost = userKm * costKm;
 
-  if (isNaN(numKm) || isNaN(age)) {
-    alert("Inserisci solo valori numeri, grazie!");
+  if (isNaN(userKm)) {
+    alert("Inserisci solo valori numerici nei kilometri, grazie!");
   } else {
     // Age < 18
-    if (age < 18) {
+    if (userAge < 18) {
       totalCost = totalCost - (totalCost * discountMinor) / 100;
     }
     //   age > 65
-    else if (age > 65) {
+    else if (userAge > 65) {
       totalCost = totalCost - (totalCost * discountSenior) / 100;
     }
 
@@ -62,5 +56,3 @@ function myFunction() {
     // document.getElementById("questo").innerHTML = printedCost;
   }
 }
-
-// ! old code
