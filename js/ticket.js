@@ -1,6 +1,9 @@
 // event listener
 
+// generate
 document.getElementById("generate").addEventListener("click", ticketGenerator);
+// reset
+document.getElementById("reset").addEventListener("click", resetValues);
 
 // function to generate ticket value
 
@@ -67,5 +70,33 @@ function ticketGenerator() {
     // Formula for printed offer result
 
     document.getElementById("showOffer").innerHTML = offer;
+
+    // Formula for printed user name
+
+    document.getElementById("showUserName").innerHTML = userName;
   }
+}
+
+// reset values function
+
+function resetValues() {
+  // name of traveler
+
+  document.getElementById("userName").innerHTML = "Jon Snow";
+
+  // kilometers to travel
+
+  document.getElementById("userKm").innerHTML = 10;
+
+  // Formula for printed cost result
+
+  document.getElementById("showPrice").innerHTML = "--";
+
+  // Formula for printed offer result
+
+  document.getElementById("showOffer").innerHTML = "--";
+
+  // Formula for printed user name
+
+  document.getElementById("showUserName").innerHTML = "Jon Snow";
 }
