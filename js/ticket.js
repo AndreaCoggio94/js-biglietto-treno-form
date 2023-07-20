@@ -1,57 +1,66 @@
-// alert("Houston siamo collegati");
+// event listener
 
 document.getElementById("generate").addEventListener("click", myFunction);
 
 function myFunction() {
+  // kilometer
+
   const userKm = document.getElementById("userKm").value;
   console.log("i tuoi kilometri " + userKm);
-}
-// const userKm = document.getElementById("userKm").value;
-// console.log(userKm);
 
-// Kilometers to travel
+  // Kilometers to travel
 
-// const numKm = parseInt(prompt("Quanti Kilometri dovrai percorrere?"));
+  const numKm = parseInt(userKm);
 
-// Age of passenger
+  // Age inserted by passenger
 
-// const age = parseInt(prompt("Quanti anni hai?"));
+  const userAge = document.getElementById("userAge").value;
+  console.log("la tua fascia di età " + userAge);
 
-// Cost per kilometer
+  // Age of passenger
 
-const costKm = 0.21;
+  const age = parseInt(userAge);
 
-// discounts
+  // Cost per kilometer
 
-const discountMinor = 20;
+  const costKm = 0.21;
 
-const discountSenior = 40;
+  // discounts
 
-// Calculated Price
+  const discountMinor = 20;
 
-let totalCost = numKm * costKm;
+  const discountSenior = 40;
 
-if (isNaN(numKm) || isNaN(age)) {
-  alert("Inserisci solo valori numeri, grazie!");
-} else {
-  // Age < 18
-  if (age < 18) {
-    totalCost = totalCost - (totalCost * discountMinor) / 100;
+  // Calculated Price
+
+  let totalCost = numKm * costKm;
+
+  if (isNaN(numKm) || isNaN(age)) {
+    alert("Inserisci solo valori numeri, grazie!");
+  } else {
+    // Age < 18
+    if (age < 18) {
+      totalCost = totalCost - (totalCost * discountMinor) / 100;
+    }
+    //   age > 65
+    else if (age > 65) {
+      totalCost = totalCost - (totalCost * discountSenior) / 100;
+    }
+
+    // Decimal Price
+
+    let finalCost = totalCost.toFixed(2);
+
+    // Formula for printed result
+
+    let finalCostString = finalCost.toString();
+
+    let printedCost = "Il costo totale è di " + finalCostString + "€";
+
+    console.log(printedCost);
+
+    // document.getElementById("questo").innerHTML = printedCost;
   }
-  //   age > 65
-  else if (age > 65) {
-    totalCost = totalCost - (totalCost * discountSenior) / 100;
-  }
-
-  // Decimal Price
-
-  let finalCost = totalCost.toFixed(2);
-
-  // Formula for printed result
-
-  let finalCostString = finalCost.toString();
-
-  let printedCost = "Il costo totale è di " + finalCostString + "€";
-
-  document.getElementById("questo").innerHTML = printedCost;
 }
+
+// ! old code
