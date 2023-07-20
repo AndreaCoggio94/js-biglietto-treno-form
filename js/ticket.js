@@ -1,5 +1,14 @@
 // alert("Houston siamo collegati");
 
+document.getElementById("generate").addEventListener("click", myFunction);
+
+function myFunction() {
+  const userKm = document.getElementById("userKm").value;
+  console.log("i tuoi kilometri " + userKm);
+}
+// const userKm = document.getElementById("userKm").value;
+// console.log(userKm);
+
 // Kilometers to travel
 
 // const numKm = parseInt(prompt("Quanti Kilometri dovrai percorrere?"));
