@@ -5,6 +5,11 @@ document.getElementById("generate").addEventListener("click", ticketGenerator);
 // function to generate ticket value
 
 function ticketGenerator() {
+  // name of traveler
+
+  const userName = document.getElementById("userName").value;
+  console.log("il tuo nome è " + userName);
+
   // kilometers to travel
 
   const userKm = parseInt(document.getElementById("userKm").value);
@@ -29,30 +34,38 @@ function ticketGenerator() {
 
   let totalCost = userKm * costKm;
 
+  // offer
+
+  let offer = "Standard";
+
   if (isNaN(userKm)) {
     alert("Inserisci solo valori numerici nei kilometri, grazie!");
   } else {
     // Age < 18
     if (userAge < 18) {
       totalCost = totalCost - (totalCost * discountMinor) / 100;
+      offer = "Minor";
     }
     //   age > 65
     else if (userAge > 65) {
       totalCost = totalCost - (totalCost * discountSenior) / 100;
+      offer = "Senior";
     }
 
     // Decimal Price
 
     let finalCost = totalCost.toFixed(2);
 
-    // Formula for printed result
+    // Formula for printed cost result
 
     let finalCostString = finalCost.toString();
 
-    let printedCost = "Il costo totale è di " + finalCostString + "€";
+    let printedCost = finalCostString + "€";
 
-    console.log(printedCost);
+    document.getElementById("showPrice").innerHTML = printedCost;
 
-    // document.getElementById("questo").innerHTML = printedCost;
+    // Formula for printed offer result
+
+    document.getElementById("showOffer").innerHTML = offer;
   }
 }
