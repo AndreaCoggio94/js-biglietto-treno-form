@@ -1,3 +1,13 @@
+:root {
+  --white: #ffffff;
+  /* website color palette */
+  --body-background: #b91450;
+}
+
 #body {
-  background-color: red;
+  background-color: var(--body-background);
+}
+
+h1 {
+  color: var(--white);
 }
